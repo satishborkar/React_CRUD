@@ -37,16 +37,8 @@
       "firstName": "Satish",
       "lastName": "Borkar",
       "email": "satyaspb@gmail.com",
-      "phone": "(91)9850892963",
+      "phone": "(91) 9850892963",
       "status": "active"
-    },
-    {
-      "firstName": "Mahesh",
-      "lastName": "Kothare",
-      "email": "satyaspb@gmail.com",
-      "phone": "98501254151",
-      "status": "active",
-      "id": 6
     }
   ]
 }

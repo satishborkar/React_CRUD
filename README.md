@@ -5,7 +5,7 @@ React-Redux CRUD Example
 ## Project Setup 
 
 ### To start local API server 
-* Open api-server folder in terminal and run following command  
+* Open Evolent folder go to api-server folder in terminal and run following command one by one    
 `npm install json-server -g`   
 `npm start`    
 
@@ -14,14 +14,14 @@ React-Redux CRUD Example
 
 ### To start Application  
 
-* Open Evolent folder in terminal and run following command  
+* Open Evolent folder in terminal and run following command one by one  
 ` npm install `  
+` npm run build`
 ` npm start `  
 
-* Application will start on following port:
-`http://localhost:8080` or
+* Application will start on following port:    
+`http://localhost:8080`,  
+`http://localhost:8081`
 
-`http://localhost:8080`
-
-* best viewed in chrome, firefox
+* best viewed in chrome, firefox, IE
 
