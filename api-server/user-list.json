@@ -1,0 +1,52 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Stanley",
+      "lastName": "Mccoy",
+      "email": "stanley.mccoy77@example.com",
+      "phone": "(129)-461-4152",
+      "status": "inactive"
+    },
+    {
+      "id": 2,
+      "firstName": "Carolyn",
+      "lastName": "Barnett",
+      "email": "carolyn.barnett32@example.com",
+      "phone": "(686)-781-3950",
+      "status": "active"
+    },
+    {
+      "id": 3,
+      "firstName": "Larry",
+      "lastName": "Hayes",
+      "email": "larry.hayes99@example.com",
+      "phone": "(369)-999-6644",
+      "status": "inactive"
+    },
+    {
+      "id": 4,
+      "firstName": "Cathy",
+      "lastName": "Scott",
+      "email": "cathy.scott36@example.com",
+      "phone": "(749)-335-6106",
+      "status": "active"
+    },
+    {
+      "id": 5,
+      "firstName": "Satish",
+      "lastName": "Borkar",
+      "email": "satyaspb@gmail.com",
+      "phone": "(91)9850892963",
+      "status": "active"
+    },
+    {
+      "firstName": "Mahesh",
+      "lastName": "Kothare",
+      "email": "satyaspb@gmail.com",
+      "phone": "98501254151",
+      "status": "active",
+      "id": 6
+    }
+  ]
+}

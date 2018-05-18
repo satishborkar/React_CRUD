@@ -1,0 +1,11 @@
+{
+  "name": "api-server",
+  "version": "1.0.0",
+  "description": "json api server for mocking a data",
+  "main": "index.js",
+  "scripts": {
+    "start": "json-server --watch -p 4321 user-list.json"
+  },
+  "author": "@satishborkar",
+  "license": "ISC"
+}
