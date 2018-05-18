@@ -16,11 +16,11 @@ React-Redux CRUD Example
 
 * Open Evolent folder in terminal and run following command one by one  
 ` npm install `  
-` npm run build`
+` npm run build`  
 ` npm start `  
 
 * Application will start on following port:    
-`http://localhost:8080`,  
+`http://localhost:8080` or    
 `http://localhost:8081`
 
 * best viewed in chrome, firefox, IE
