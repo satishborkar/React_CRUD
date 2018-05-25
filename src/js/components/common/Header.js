@@ -7,8 +7,8 @@ const Header = () => {
     <div className="header">
       <div className="container">
         <h1>
-          evolent
-          <small>Health</small>
+          EMS <sub>2</sub>
+          <small>system</small>
         </h1>
         {Links}
       </div>

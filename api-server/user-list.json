@@ -39,6 +39,14 @@
       "email": "satyaspb@gmail.com",
       "phone": "(91) 9850892963",
       "status": "active"
+    },
+    {
+      "id": 6,
+      "firstName": "Harry",
+      "lastName": "Potter",
+      "email": "potter.harry@gmail.com",
+      "phone": "9850892963",
+      "status": "inactive"
     }
   ]
 }

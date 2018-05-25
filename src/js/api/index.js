@@ -1,4 +1,6 @@
 import { BASE_URL } from "../helper/constants";
+import * as ACTION from "../actions/types";
+import store from "../store";
 
 class apiService {
   static getUsers() {
@@ -7,6 +9,13 @@ class apiService {
         return res.json();
       })
       .catch(err => {
+        //return err;
+        const error = {
+          statusCode: 503,
+          message: "API service is currently unavailable...",
+          result_code: "503"
+        };
+        store.dispatch({ type: ACTION.DISPLAY_ERR, payload: error });
         return err;
       });
   }

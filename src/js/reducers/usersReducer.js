@@ -4,7 +4,7 @@ import initialState from "./initialState";
 const usersReducer = (state = initialState.users, action) => {
   switch (action.type) {
     case actionTypes.GET_USERS:
-      return action.payload.reverse();
+      return action.payload;
     case actionTypes.ADD_USER:
       return [action.payload, ...state];
     case actionTypes.UPDATE_USER:

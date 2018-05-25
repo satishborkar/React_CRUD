@@ -68,5 +68,5 @@ const Grid = props => {
   );
 };
 
-export default LoaderHOC("data")(Grid);
-//export default Grid;
+//export default LoaderHOC("data")(Grid);
+export default Grid;

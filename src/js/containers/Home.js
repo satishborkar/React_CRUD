@@ -5,6 +5,7 @@ import { bindActionCreators } from "redux";
 import * as actionCreator from "../actions/actionCreator";
 import Grid from "../components/common/Grid";
 import StatusType from "../components/common/StatusType";
+import ErrorDisplay from "../components/common/ErrorDisplay";
 
 class Home extends Component {
   constructor(props) {
@@ -32,6 +33,11 @@ class Home extends Component {
   }
 
   render() {
+    const { error, users } = this.props;
+    if (error.constructor === Object && Object.keys(error).length > 0) {
+      return <ErrorDisplay {...error} />;
+    }
+
     return (
       <div>
         <div className="grid-title">
@@ -44,24 +50,25 @@ class Home extends Component {
         </div>
         <div className="grid-holder">
           <Grid
-            data={this.props.users}
+            data={users}
             deleteUser={this._deleteUser}
             editUser={this._editUser}
           />
-          <StatusType />
+          <StatusType hidden={!users.length} />
         </div>
       </div>
     );
   }
 
   static propTypes = {
-    users: PropTypes.array
+    users: PropTypes.oneOfType([PropTypes.array, PropTypes.object])
   };
 }
 
 function mapStateToProps(state) {
   return {
-    users: state.users
+    users: state.users,
+    error: state.error
   };
 }
 function mapDispatchToProps(dispatch) {

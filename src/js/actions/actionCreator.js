@@ -9,7 +9,7 @@ export function getAllUsers() {
         //return data
         dispatch({ type: ACTION.GET_USERS, payload: data });
       })
-      .catch(error => {
+      .catch(err => {
         throw error;
       });
   };
@@ -23,7 +23,8 @@ export function addUser(user) {
         dispatch({ type: ACTION.ADD_USER, payload: user });
       })
       .catch(error => {
-        throw error;
+        //throw error;
+        dispatch({ type: ACTION.DISPLAY_ERR, payload: error });
       });
   };
 }
@@ -36,7 +37,8 @@ export function updateUser(user) {
         dispatch({ type: ACTION.UPDATE_USER, payload: user });
       })
       .catch(error => {
-        throw error;
+        //throw error;
+        dispatch({ type: ACTION.DISPLAY_ERR, payload: error });
       });
   };
 }
