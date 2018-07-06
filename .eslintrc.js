@@ -8,12 +8,9 @@ module.exports = {
         "sourceType": "module"
     },
     "rules": {
-        "indent": [
-            "error",
-            4
-        ],
+        "indent": 0,
         "no-trailing-whitespace": [
-            true, 
+            true,
             "ignore-comments"
         ],
         "linebreak-style": [

@@ -3,8 +3,13 @@ import * as ACTION from "../actions/types";
 import store from "../store";
 
 class apiService {
+
+  static loginUser() {
+    //return
+  }
+
   static getUsers() {
-    return fetch(BASE_URL)
+    return fetch(BASE_URL + "users/")
       .then(res => {
         return res.json();
       })
@@ -21,7 +26,7 @@ class apiService {
   }
 
   static addUser(user) {
-    return fetch(BASE_URL, {
+    return fetch(BASE_URL + "users/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(user)
@@ -35,7 +40,7 @@ class apiService {
   }
 
   static updateUser(user) {
-    return fetch(BASE_URL + user.id, {
+    return fetch(BASE_URL + "users/" + user.id, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(user)
@@ -49,7 +54,7 @@ class apiService {
   }
 
   static deleteUser(id) {
-    return fetch(BASE_URL + id, { method: "DELETE" })
+    return fetch(BASE_URL + "users/" + id, { method: "DELETE" })
       .then(res => {
         return res.json();
       })

@@ -14,6 +14,8 @@ class Home extends Component {
     this._deleteUser = this._deleteUser.bind(this);
     this._editUser = this._editUser.bind(this);
     this._addNew = this._addNew.bind(this);
+    //{ props } = this.props;
+
   }
   componentWillMount() {
     this.props.actions.getAllUsers();
