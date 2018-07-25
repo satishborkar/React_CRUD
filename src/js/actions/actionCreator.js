@@ -2,21 +2,21 @@ import apiService from "../api";
 import * as ACTION from "./types";
 
 export function getAllUsers() {
-  return function(dispatch) {
+  return function (dispatch) {
     return apiService
       .getUsers()
       .then(data => {
-        //return data
+        console.log("Action Creator Data", data);
         dispatch({ type: ACTION.GET_USERS, payload: data });
       })
       .catch(err => {
-        throw error;
+        dispatch({ type: ACTION.DISPLAY_ERR, payload: err });
       });
   };
 }
 
 export function addUser(user) {
-  return function(dispatch) {
+  return function (dispatch) {
     return apiService
       .addUser(user)
       .then(user => {
@@ -30,7 +30,7 @@ export function addUser(user) {
 }
 
 export function updateUser(user) {
-  return function(dispatch) {
+  return function (dispatch) {
     return apiService
       .updateUser(user)
       .then(res => {
@@ -44,7 +44,7 @@ export function updateUser(user) {
 }
 
 export function deleteUserById(id) {
-  return function(dispatch) {
+  return function (dispatch) {
     return apiService
       .deleteUser(id)
       .then(res => {
@@ -54,7 +54,8 @@ export function deleteUserById(id) {
         });
       })
       .catch(error => {
-        throw error;
+        //throw error;
+        dispatch({ type: ACTION.DISPLAY_ERR, payload: error });
       });
   };
 }

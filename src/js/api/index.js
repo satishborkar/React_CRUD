@@ -4,9 +4,9 @@ import store from "../store";
 
 class apiService {
 
-  static loginUser() {
-    //return
-  }
+  // static loginUser() {
+  //   //return
+  // }
 
   static getUsers() {
     return fetch(BASE_URL + "users/")

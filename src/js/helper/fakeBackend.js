@@ -127,24 +127,24 @@ export function fakeBackend() {
 
                     //find the user in userCollection 
 
-                    const getUser = userCollection.filter((user) => { return user.username == params.username && user.password === params.password });
-                    
+                    const getUser = userCollection.filter((user) => {
+                        return user.username == params.username && user.password === params.password;
+                    });
+
                     if (getUser.length > 0) {
 
                         let user = getUser[0];
 
                         let responseObj = {
-
                             id: user.id,
                             firstName: user.firstName,
                             lastName: user.lastName,
                             token: user.token
-
                         }
 
                         resolve({ ok: true, json: () => responseObj });
                     } else {
-                        reject({ message: 'Invalid username or password', statusCode: '404' })
+                        reject({ message: 'Invalid username or password', statusCode: '404' });
                     }
 
                 }
