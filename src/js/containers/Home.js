@@ -15,7 +15,6 @@ class Home extends Component {
     this._editUser = this._editUser.bind(this);
     this._addNew = this._addNew.bind(this);
     //{ props } = this.props;
-
   }
   componentWillMount() {
     this.props.actions.getAllUsers();
@@ -36,6 +35,7 @@ class Home extends Component {
 
   render() {
     const { error, users } = this.props;
+    console.log(users);
     if (error.constructor === Object && Object.keys(error).length > 0) {
       return <ErrorDisplay {...error} />;
     }
@@ -81,4 +81,7 @@ function mapDispatchToProps(dispatch) {
   return obj;
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Home);

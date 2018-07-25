@@ -11,6 +11,7 @@ class apiService {
   static getUsers() {
     return fetch(BASE_URL + "users/")
       .then(res => {
+        console.log("users service")
         return res.json();
       })
       .catch(err => {

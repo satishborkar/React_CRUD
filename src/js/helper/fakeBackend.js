@@ -153,7 +153,6 @@ export function fakeBackend() {
                 realFetch(url, opts);
 
             }, 500);
-
         });
     };
 }
