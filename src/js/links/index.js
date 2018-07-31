@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import store from "../store";
+import * as actionsTypes from "../actions/types";
 
 export default (
   <ul className="menu">
@@ -15,7 +17,9 @@ export default (
       <Link to="/contacts"> Contact Details </Link>
     </li>
     <li className="pull-right">
-    <Link to="/contacts"> log Out </Link>
-  </li>
+      <a href="javascript:void(0)" onClick={function () {
+        store.dispatch({ type: actionsTypes.LOGOUT })
+      }}>log Out </a>
+    </li>
   </ul>
 );

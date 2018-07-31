@@ -13,7 +13,7 @@ import HelpCenter from "../containers/HelpCenter";
 export default (
   <Switch history={history}>
     <Route exact path="/" component={Login} />
-    <Route exact path="/login" component={Login} />
+    <Route path="/login" component={Login} />
     <PrivateRoute path="/dashboard" component={Home} />
     <PrivateRoute path="/new" component={AddNew} />
     <PrivateRoute path="/edit/:id" component={EditUser} />

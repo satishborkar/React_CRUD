@@ -1,5 +1,8 @@
 export default {
   users: [],
   user: {},
-  error:{}
+  error: {},
+  userStatus: {
+    login: false
+  }
 };
